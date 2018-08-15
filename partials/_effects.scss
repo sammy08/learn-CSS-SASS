@@ -1,0 +1,15 @@
+@mixin Darkness($color,$AmmountDark){
+	color:darken($color,$AmmountDark);
+}
+@mixin Lightness($cor,$AmmountLight){
+	color:lighten($color,$AmmountLight);
+}
+
+button{
+	&:hover{
+		@include Darkness(#3cb878,15%);
+	}
+}
+.btn{
+
+}

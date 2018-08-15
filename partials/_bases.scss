@@ -1,0 +1,31 @@
+@function calc-fluid($target, $ammount){
+  $retorno: ($target / $ammount) * 100;
+  @return $retorno;
+}
+@function calc-Font-Size($base){
+  $result: ($base / 16);
+  @return $result;
+}
+@mixin border-radius($radius){
+  -webkit-border-radius:$radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+header{
+  h1{
+      font:{
+      size:calc-Font-Size(28rem);
+    }
+  }
+}
+header {
+  h2{
+    font:{
+      size:calc-Font-Size(24rem);
+    }
+  }
+}
+
+.btns{
+  @include border-radius(4px);
+}
