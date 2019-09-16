@@ -1,0 +1,47 @@
+// Variaveis 
+
+// tamanho base do css
+$layout-module-size:30px;
+// sass list
+$directions:top,right,bottom,left;
+
+// text/font
+%u-bold{font-weight:bold;}
+%u-no-bold{font-weight: none;}
+%u-italic{font-style:italic;}
+%u-no-italic{font-style: normal;}
+
+%u-text-align-left{text-align:left;}
+%u-text-align-center{text-align:center;}
+%u-text-align-right{text-align:right;}
+%u-text-align-justify{text-align:justify;}
+
+%u-text-align-uppercase{text-transform: uppercase;}
+%u-text-align-capitalze{text-transform: capitalize;}
+
+// position
+%u-position-absolute{position: absolute;}
+%u-position-relative{position: relative;}
+%u-position-fixed{position: fixed;}
+
+//Padding/ Margin
+%u-no-padding{padding: 0;}
+%u-no-margin{margin: 0;}
+
+@each $direction in $directions{
+    %u-no-padding-#{$direction}{padding-#{$direction}:0};
+    // metade do valor base
+    %u-half-padding-#{$direction}{padding-#{$direction}:$layout-module-size / 2};
+   // dobro do valor base
+    %u-double-padding-#{$direction}{padding-#{$direction}:$layout-module-size * 2};
+
+    %u-no-margin-#{$direction}{margin-#{$direction}:0};
+
+    %u-half-margin-#{$direction}{margin-#{$direction}:$layout-module-size / 2};
+
+    %u-double-margin-#{$direction}{margin-#{$direction}:$layout-module-size * 2};
+
+}
+// display
+%u-display-flex{display: flex;}
+%u-display-block{display: block;}
